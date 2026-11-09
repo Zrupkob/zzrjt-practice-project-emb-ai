@@ -20,6 +20,8 @@ def sent_analyzer():
     # DONE
     # Retrieve the text to analyze from the request arguments
     text_to_analyze = request.args.get('textToAnalyze')
+    if text_to_analyze == '':
+        return "Please provide an input text."
     # Pass the text to the sentiment_analyzer function and store the response
     response = sentiment_analyzer(text_to_analyze)
     # Extract the label and score from the response
