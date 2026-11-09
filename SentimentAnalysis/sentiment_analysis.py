@@ -19,3 +19,4 @@ def sentiment_analyzer(text_to_analyse):
     score = formatted_response['documentSentiment']['score']
      # Returning a dictionary containing sentiment analysis results
     return {'label': label, 'score': score}
+    
